@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --header-height: 80px;
+    --mobile-header-height: 72px;
+
+    /* New Brand Tokens - Light Mode Default */
+    --color-primary: #2563EB; /* Royal Blue */
+    --color-secondary: #06B6D4; /* Fresh Cyan */
+    --color-accent: #EDE9FE; /* Soft Lavender */
+    --color-bg: #FFFFFF; /* Premium White */
+    --color-alt-bg: #EFF6FF; /* Ice Blue */
+    --color-heading: #172554; /* Deep Navy */
+    --color-text: #475569; /* Slate */
+
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    box-sizing: border-box;
+    overflow-x: clip;
+  }
+
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #475569;
+    margin: 0;
+    padding: 0;
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  main {
+    padding-top: var(--mobile-header-height);
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 768px) {
+    main {
+      padding-top: var(--header-height);
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6, p, span, a, button, label, input, textarea, select {
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+}
+
+/* Custom scrollbar in Royal Blue & Cyan */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(37, 99, 235, 0.25);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2563EB;
+}
+
+/* Dark mode styling */
+.dark body {
+  background-color: #0B1220;
+  color: #F8FAFC;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #0B1220;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(248, 250, 252, 0.2);
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #60A5FA;
+}
+
+/* Smooth brand color transitions */
+.transition-brand {
+  transition: background-color 250ms ease, color 250ms ease, border-color 250ms ease, box-shadow 250ms ease, transform 250ms ease;
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

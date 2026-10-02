@@ -1,0 +1,6 @@
+{
+  "name": "ApexLedger Advisory",
+  "description": "Premier accounting, corporate tax planning, and strategic financial outsourcing for modern businesses and CPA firms.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ApexLedger Advisory – Modern Accounting & Tax Consultancy</title>
+    <meta name="description" content="Premier accounting, corporate tax planning, and strategic financial outsourcing for modern businesses and CPA firms." />
+    <meta property="og:title" content="ApexLedger Advisory – Modern Accounting & Tax Consultancy" />
+    <meta property="og:description" content="Premier accounting, corporate tax planning, and strategic financial outsourcing for modern businesses and CPA firms." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ApexLedger Advisory" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ApexLedger Advisory – Modern Accounting & Tax Consultancy" />
+    <meta name="twitter:description" content="Premier accounting, corporate tax planning, and strategic financial outsourcing for modern businesses and CPA firms." />
+    <meta name="theme-color" content="#2563EB" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+      try {
+        const theme = localStorage.getItem('apexledger_theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+
+      // Suppress Vite HMR WebSocket connection errors in sandbox/iframe environment
+      window.addEventListener('unhandledrejection', function(event) {
+        var reason = event.reason;
+        var msg = (reason && (reason.message || reason.stack || String(reason))) || '';
+        if (msg.includes('WebSocket') || msg.includes('websocket')) {
+          event.preventDefault();
+        }
+      });
+      window.addEventListener('error', function(event) {
+        var msg = (event.message || event.error?.message || '') + '';
+        if (msg.includes('WebSocket') || msg.includes('websocket')) {
+          event.preventDefault();
+        }
+      });
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AccountingService",
+      "name": "ApexLedger Advisory",
+      "description": "Premier accounting, corporate tax planning, and strategic financial outsourcing for modern businesses and CPA firms.",
+      "priceRange": "$$",
+      "openingHours": "Mo-Fr 08:00-18:00",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "addressCountry": "US"
+      }
+    }
+    </script>
+  </head>
+  <body class="bg-[#FFFFFF] text-[#475569] selection:bg-[#2563EB] selection:text-white antialiased min-h-screen overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
